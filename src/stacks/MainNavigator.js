@@ -9,7 +9,13 @@ const Tab = createBottomTabNavigator();
 
 const MainNavigator = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+      screenOptions={{
+        cardStyle: {
+          backgroundColor: "white",
+        },
+      }}
+    >
       <Tab.Screen name="Welcome" component={WelcomeScreen} />
       <Tab.Screen name="Auth" component={AuthScreen} />
       <Tab.Screen name="Main" component={MainScreen} />
